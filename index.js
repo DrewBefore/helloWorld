@@ -14,6 +14,10 @@ app.get('/', function(request, response) {
   response.render('pages/index');
 });
 
+app.get('/projects', function(req, res){
+  res.render('pages/projects');
+});
+
 //test
 app.listen(app.get('port'), function() {
   console.log('Node app is running on port', app.get('port'));
