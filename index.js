@@ -1,9 +1,22 @@
 var express = require('express');
 var app = express();
 var mongoose = require("mongoose");
+mongoose.Promise = global.Promise;
 var bodyParser = require("body-parser");
+var Project = require("./models/project.js");
 
+//mongoose.connect("mongodb://localhost/portfolio");
+mongoose.connect(process.env.PORTFOLIOURL);
 
+// SAVE NEW PROJECT
+// var testProject = new Project({name: "test6", img:"test.img"});
+// testProject.save(function(err, project){
+//   if(err){
+//     console.log(err);
+//   } else {
+//     console.log("successfully saved project to database");
+//   }
+// });
 
 app.set('port', (process.env.PORT || 5000));
 
@@ -19,6 +32,13 @@ app.get('/', function(request, response) {
 });
 
 app.get('/projects', function(req, res){
+    Project.find({}, function(err, allProjects){
+      if(err){
+        console.log(err);
+      } else {
+        console.log(allProjects);
+      }
+  });
   res.render('pages/projects');
 });
 
