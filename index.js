@@ -9,7 +9,17 @@ var Project = require("./models/project.js");
 mongoose.connect(process.env.PORTFOLIOURL);
 
 // SAVE NEW PROJECT
-// var testProject = new Project({name: "test6", img:"test.img"});
+// var testProject = new Project(
+//   {
+//     title: "test10", 
+//     sub_title: "Sub_title",
+//     description: "This is my first test, DESCRIPTION",
+//     details: ["blahblahblah1", "blahblah2", "blahblah3"],
+//     website: "dbefore.com",
+//     thumbnail: "/stylesheets/img/FINAL location-03.png",
+//     imgs: ["test.img"]
+  
+// });
 // testProject.save(function(err, project){
 //   if(err){
 //     console.log(err);
@@ -36,10 +46,21 @@ app.get('/projects', function(req, res){
       if(err){
         console.log(err);
       } else {
-        console.log(allProjects);
+        res.render('pages/projects', {projects:allProjects});
       }
   });
-  res.render('pages/projects');
+});
+
+app.get('/projects/:title', function(req, res){
+    Project.findOne({title:req.params.title}, function(err, foundProject){
+      if (err) {
+        console.log(err);
+      } else {
+        Project.find({}, function(err, all){
+          res.render('pages/project', {project:foundProject, allProjects:all});
+        });
+      }
+    });
 });
 
 //test

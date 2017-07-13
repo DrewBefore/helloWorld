@@ -1,9 +1,14 @@
 var mongoose = require("mongoose");
 
 var ProjectSchema = new mongoose.Schema({
-  name: String,
+  title: String,
+  sub_title: String,
   description: String,
-  img: String
+  details: [],
+  website: String,
+  thumbnail: String,
+  jumbo: String,
+  imgs: []
 });
 
 module.exports = mongoose.model("Project", ProjectSchema);
