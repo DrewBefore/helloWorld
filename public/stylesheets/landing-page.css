@@ -37,7 +37,10 @@ h6 {
     color: #f8f8f8;
     background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(/stylesheets/img/lookup.jpg) no-repeat center center;
     background-size: cover;
+}
 
+.outro-header {
+    text-align: center;
 }
 
 .github {
@@ -160,6 +163,7 @@ h6 {
     background-color: white;
     padding-top: 18px;
     padding-bottom: 0px;
+    text-align: center;
 }
 
 #additional {
