@@ -32,11 +32,12 @@ h6 {
 
 .intro-header {
     padding-top: 50px;
-    padding-bottom: 50px;
+    padding-bottom: 140px;
     text-align: center;
     color: #f8f8f8;
-    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(/stylesheets/img/lookup.jpg) no-repeat center center;
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(/stylesheets/img/background.png) no-repeat center center;
     background-size: cover;
+    background-position: 20 0;
 }
 
 .outro-header {
@@ -51,8 +52,8 @@ h6 {
 
 .intro-message {
     position: relative;
-    padding-top: 20%;
-    padding-bottom: 20%;
+    margin-top: 20%;
+    margin-bottom: 20%;
 }
 
 .intro-message > h1 {
