@@ -54,7 +54,7 @@ body {
 .content h3 {
     padding: 0;
     color: #fff;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     font-size: 4rem;
     transform: translateY(-100%) scale(0);
     transition: .5s;
@@ -83,6 +83,7 @@ body {
 }
 .imgBox:hover {
     border: 5px solid purple;
+    transition: .5s;
 }
 .imgBox:hover .overlay:before {
     opacity: 1;
