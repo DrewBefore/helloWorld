@@ -68,7 +68,14 @@
             <% if (moreProject.title != project.title) { %>
                 <div class="col-sm-3 col-xs-6">
                     <a href="/projects/<%= moreProject.title %>">
-                        <img class="img-responsive portfolio-item" src="<%= moreProject.thumbnail %>" alt="">
+                        <div class="imgBox">
+                            <img class="img-responsive portfolio-item" src="<%= moreProject.thumbnail %>" alt="">
+                            <div class="overlay">
+                                <div class="content">
+                                    <h3 class="text-center"><%=moreProject.title %></h3>
+                                </div>
+                            </div>
+                        </div>
                     </a>
                 </div>
             <% } %>             
