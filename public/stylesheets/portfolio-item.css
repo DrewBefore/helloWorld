@@ -1,11 +1,49 @@
-/*!
- * Start Bootstrap - Portfolio Item (http://startbootstrap.com/)
- * Copyright 2013-2016 Start Bootstrap
- * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
- */
-
 body {
-    padding-top: 70px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+    padding-top: 70px; 
+}
+
+.project {
+    margin-bottom: 25px;
+    height: 300px;
+    width: 100%;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    position: relative;
+}
+
+.overlay {
+    transition: all .5s ease;
+    float: left;
+    position: absolute;
+    height: 300px;
+    width: 100%;
+    left: 0px;
+    top: 0px;
+    z-index: 1;
+    background-color: black;
+    opacity: 0;
+    padding: 5px;
+    color: white;
+    font-style: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay h3 {
+    font-size: 4rem;
+    object-fit: cover;
+    width: 100%;
+}
+
+.overlay:hover {
+    opacity: .5;
+    transition: all .5s ease;
+}
+
+.overlay:hover + .portfolio-item {
+        border: 5px solid rgba(255, 0, 255, 1);
+        transition: all .5s ease;
 }
 
 .portfolio-item {
@@ -16,10 +54,7 @@ body {
     border-top-right-radius: 3px;
     object-fit: cover;
     object-position: top;
-}
-
-.portfolio-item:hover {
-    border: 5px solid purple;
+    background-color: black;
 }
 
 .img-extra {
